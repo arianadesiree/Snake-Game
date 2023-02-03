@@ -24,10 +24,14 @@ The snake game, as the classic game is played, a user will be able to earn point
 
 
 Color Scheme Idea- 
-Blue Gray #7393B /
-Aqua #00FFFF /
-Azure #F0FFFF /
-Bright Red #EE4B2B
+Blue Gray `#6699CC` ![image](https://user-images.githubusercontent.com/22970290/216625872-b0ad5092-92f9-4001-8714-7ff8bcb9bb0f.png)
+
+Cyan `#00FFFF` ![image](https://user-images.githubusercontent.com/22970290/216626046-e2d011dc-e3d5-4e25-870e-3aef34cff2a6.png)
+
+Pale Cyan `#F0FFFF` ![image](https://user-images.githubusercontent.com/22970290/216626213-1e4769d2-fd2d-40c0-a745-47366f7b9e59.png)
+
+Bright Red `#EE4B2B` ![image](https://user-images.githubusercontent.com/22970290/216626440-e1555f0e-cdce-439c-8ec7-7f2930121f4b.png)
+
 
 
 
