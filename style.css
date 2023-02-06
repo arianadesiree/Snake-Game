@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .food {
+    background: #FF4500;
+  }
+  
+  .snake {
+    background: #556B2F;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    font-family: arial;
+    background-image: linear-gradient(to bottom, #A0522D,#BC8F8F, #D8BFD8);
+    position: relative;
+    text-align: center;
+  }
+  
+ 
+  header {
+    font-family: 'Pacifico';
+    text-align: center;
+    font-size: 55px;
+    letter-spacing: 5px;
+    padding:80px 80px;
+    color: blanchedalmond;
+    text-shadow: #DAA520 1px 0 10px;
+  }
+  
+  /* the game table */
+  .table {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    box-shadow: 1px 3px 1px 3px rgba(0,0,0,0.3);
+  }
+  @media only screen and (min-width: 768px) {
+    .table {
+      width: 315px;
+      height: 345px;
+    }
+  }
+  
+  /* all boxes in the table */
+  .box {
+    background: white;
+    border: solid 1px white;
+    width: 10px;
+    height: 10px;
+  }
+  @media only screen and (min-width: 768px) {
+    .box {
+      width: 15px;
+      height: 15px;
+    }
+  }
+  
+
+  /* window before and after game */
+  .modul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    text-align: center;
+  }
+  .play {
+    background: rgba(256,256,256,1);
+    padding: 65px;
+    box-shadow: 0 0 4px 5px rgba(0,0,0,0.5);
+    border-radius: 50px;
+    font-family: 'Pacifico';
+  }
+  .play span {
+    color: #A0522D;
+    border: 1px solid;
+    border-radius: 2px;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .play span:hover {
+    background: #A0522D;
+    color: white;
+  }
+
+
+
+
+
+/* still need status bar for during play */
+
+
+
+ 
+/* still need score board */
+  
+
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+.hidden {
+    display: none !important;
+  }
