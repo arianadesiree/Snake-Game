@@ -18,7 +18,7 @@ h1 {
 body {
   --size: 50px;
   --color:  white;
-  font-family: 'Pacifico'
+  font-family: 'Pacifico';
   color: var(--color);
   background-color: white;
   background-image: url("wp2409705-snake-game-wallpapers.jpg");
@@ -38,8 +38,6 @@ footer {
   body {
     --size: 25px;
   }
-
-
 
 
 

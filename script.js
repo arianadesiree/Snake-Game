@@ -22,9 +22,9 @@ window.addEventListener("DOMContentLoaded", function (event) {
   const height = 15; // Grid height
 
   const speed = 200; // Milliseconds it takes for the snake to take a step in the grid
-  let fadeSpeed = 5000; // milliseconds it takes the grid to disappear (initially)
+  let fadeSpeed = 8000; // milliseconds it takes the grid to disappear (initially)
   let fadeExponential = 1.024; // after each score it will gradually take more time for the grid to fade
-  const contrastIncrease = 0.5; // contrast you gain after each score
+  const contrastIncrease = 1; // contrast you gain after each score
   const color = "black"; // Primary color
 
   // Setup: Build up the grid
@@ -129,7 +129,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
     // Set Hard mode
     if (event.key == "H" || event.key == "h") {
       hardMode = true;
-      fadeSpeed = 4000;
+      fadeSpeed = 7000;
       fadeExponential = 1.025;
       noteElement.innerHTML = `Hard mode. Press space to start!`;
       noteElement.style.opacity = 1;
@@ -140,7 +140,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
     // Set Easy mode
     if (event.key == "E" || event.key == "e") {
       hardMode = false;
-      fadeSpeed = 5000;
+      fadeSpeed = 9000;
       fadeExponential = 1.024;
       noteElement.innerHTML = `Easy mode. Press space to start!`;
       noteElement.style.opacity = 1;
@@ -231,10 +231,10 @@ window.addEventListener("DOMContentLoaded", function (event) {
           // Debugging
           console.log(`Contrast increased by ${contrastIncrease * 100}%`);
           console.log(
-            "New fade speed (from 100% to 0% in milliseconds)",
-            Math.pow(fadeExponential, score) * fadeSpeed
-          );
-        }
+           "New fade speed (from 100% to 0% in milliseconds)",
+           Math.pow(fadeExponential, score) * fadeSpeed
+         );
+       }
 
         stepsTaken++;
       } else {
@@ -244,15 +244,15 @@ window.addEventListener("DOMContentLoaded", function (event) {
       if (lastTimestamp) {
         // Decrease the contrast based on the time passed an the current score
         // With a higher score the contrast decreases slower
-        const contrastDecrease =
-          timeElapsedSinceLastCall /
-          (Math.pow(fadeExponential, score) * fadeSpeed);
-        // Don't let the contrast drop below zero
-        contrast = Math.max(0, contrast - contrastDecrease);
-      }
+      const contrastDecrease =
+        timeElapsedSinceLastCall /
+       (Math.pow(fadeExponential, score) * fadeSpeed);
+       // Don't let the contrast drop below zero
+       contrast = Math.max(0, contrast - contrastDecrease);
+     }
 
-      contrastElement.innerText = `${Math.floor(contrast * 100)}%`;
-      containerElement.style.opacity = contrast;
+     contrastElement.innerText = `${Math.floor(contrast * 100)}%`;
+     containerElement.style.opacity = contrast;
 
       window.requestAnimationFrame(main);
     } catch (error) {
