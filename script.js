@@ -1,3 +1,15 @@
+// https://ari-snake-game.surge.sh/
+
+const btn = document.getElementById("btn")
+
+document.addEventListener("gameover", function() {
+  alert("Game Over");
+});
+
+// Trigger the gameover event
+document.dispatchEvent(new Event("gameover"));
+
+
 
 window.addEventListener("DOMContentLoaded", function (event) {
   window.focus(); // Capture keys right away (by default focus is on editor)
@@ -491,3 +503,19 @@ window.addEventListener("DOMContentLoaded", function (event) {
       .join(" ");
   }
 });
+
+
+// cite: help by tutorial of https://www.youtube.com/watch?v=TAmYp4jKWoM and https://www.youtube.com/watch?v=W6NZfCO5SIk
+
+
+
+
+function gameOver() {
+
+  ctx.fillStyle = 'white';
+  ctx.textBaseline = 'middle';
+  ctx.textAlign = 'center';
+  ctx.font = 'normal bold 18px serif';
+
+  ctx.fillText('Game over', C_WIDTH/2, C_HEIGHT/2);
+}
